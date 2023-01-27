@@ -1,4 +1,12 @@
 /* https://www.w3schools.com/w3css/tryw3css_templates_social.htm */
+:root {
+  --color1: hsl(180, 80%, 75%);
+  --color2: hsl(200, 80%, 75%);
+  --color3: hsl(90, 80%, 85%);
+  /* --color4: hsl(90, 50%, 90%); */
+  --color4: hsl(200, 10%, 20%);
+}
+
 html,
 body,
 h1,
@@ -8,6 +16,7 @@ h4,
 h5 {
   font-family: "Open Sans", sans-serif;
 }
+/*!Replace inject style  */
 #container {
   max-width: 1400px;
   margin-top: 80px;
@@ -19,3 +28,74 @@ h5 {
 #article-1st {
   margin: 0 -16px;
 }
+/*!replace bg color  */
+.ibm-bg-nav {
+  background: var(--color2);
+}
+.ibm-nav {
+  box-shadow: 5px 3px 10px 7px var(--color2);
+}
+.ibm-bg-logo {
+  background: var(--color3);
+}
+.ibm-bgAndCol-body {
+  color: var(--color4) !important;
+  background: var(--color1) !important;
+}
+.ibm-white,
+.ibm-hover-white:hover {
+  color: var(--color4) !important;
+  background-color: var(--color3) !important;
+}
+hr {
+  border-top: 1px solid var(--color2) !important;
+}
+.ibm-theme {
+  color: var(--color1) !important;
+  background-color: var(--color4) !important;
+  border-radius: 5px;
+}
+.ibm-theme-2 {
+  color: var(--color4) !important;
+  background-color: var(--color2) !important;
+  border-radius: 5px;
+}
+.ibm-theme-3 {
+  color: var(--color4) !important;
+  background-color: var(--color1) !important;
+  border-radius: 5px;
+}
+/*! Shadow card begin*/
+.ibm-card {
+  position: relative;
+}
+.ibm-card:before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(20deg, var(--color4) 0%, var(--color1) 100%);
+  transform: translate3d(10px, 10px, 0) scale(1);
+  filter: blur(20px);
+  opacity: 0.8;
+  transition: opacity 0.3s;
+  border-radius: inherit;
+}
+
+/** Prevents issues */
+.ibm-card::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  border-radius: inherit;
+}
+/*!shadow card end*/
