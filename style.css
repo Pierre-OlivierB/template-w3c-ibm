@@ -8,3 +8,14 @@ h4,
 h5 {
   font-family: "Open Sans", sans-serif;
 }
+#container {
+  max-width: 1400px;
+  margin-top: 80px;
+}
+#profile-avatar {
+  height: 106px;
+  width: 106px;
+}
+#article-1st {
+  margin: 0 -16px;
+}
