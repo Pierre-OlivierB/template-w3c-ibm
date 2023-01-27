@@ -138,12 +138,12 @@ footer {
   display: block !important;
   font-size: 3rem;
   transform: translateY(-100px) rotateZ(-90deg);
-  color: black;
+  color: var(--color4);
   transition: color 2s ease, transform 2s ease;
   animation: beat 5s linear infinite;
 }
 .ibm-footer-before:hover {
-  color: red;
+  color: var(--color2);
   transform: translateY(-90px) rotateZ(-90deg) scale(2);
   cursor: pointer;
 }
@@ -156,5 +156,29 @@ footer {
   }
   to {
     transform: translateY(-90px) rotateZ(-90deg) scale(1);
+  }
+}
+@media screen and (max-width: 600px) {
+  .ibm-footer-before {
+    right: 50px;
+    display: block !important;
+    transform: rotate(-90deg);
+    color: var(--color3);
+    animation: minBeat 5s linear infinite;
+  }
+  .ibm-footer-before:hover {
+    color: var(--color2);
+    cursor: pointer;
+  }
+}
+@keyframes minBeat {
+  from {
+    transform: rotate(-90deg) scale(1);
+  }
+  50% {
+    transform: rotate(-90deg) scale(1.5);
+  }
+  to {
+    transform: rotate(-90deg) scale(1);
   }
 }
