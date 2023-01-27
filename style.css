@@ -99,3 +99,12 @@ hr {
   border-radius: inherit;
 }
 /*!shadow card end*/
+button {
+  border-radius: 3px;
+  transition: transform 2s ease;
+}
+button:hover {
+  transform: scale(1.1);
+  background-color: var(--color1) !important;
+  color: var(--color4) !important;
+}
