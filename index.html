@@ -27,14 +27,21 @@
 
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body class="ibm-bgAndCol-body">
+  <body class="ibm-bgAndCol-body" id="top">
     <!-- Navbar -->
     <div class="w3-top ibm-nav">
       <div class="w3-bar ibm-bg-nav w3-left-align w3-large">
-        <a
+        <!-- <a
           class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large ibm-hover-white w3-large ibm-theme"
           href="javascript:void(0);"
           onclick="openNav()"
+          id="nav-onclick"
+          ><i class="fa fa-bars"></i
+        ></a> -->
+        <a
+          class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large ibm-hover-white w3-large ibm-theme"
+          href="javascript:void(0);"
+          id="nav-onclick"
           ><i class="fa fa-bars"></i
         ></a>
         <a href="#" class="w3-bar-item w3-button w3-padding-large ibm-bg-logo"
@@ -61,7 +68,10 @@
           ><i class="fas fa-envelope"></i
         ></a>
         <div class="w3-dropdown-hover w3-hide-small">
-          <button class="w3-button w3-padding-large" title="Notifications">
+          <button
+            class="w3-button w3-padding-large ibm-dropdown"
+            title="Notifications"
+          >
             <i class="fas fa-bell"></i
             ><span class="w3-badge w3-right w3-small w3-green">3</span>
           </button>
@@ -69,11 +79,15 @@
             class="w3-dropdown-content w3-card-4 w3-bar-block"
             style="width: 300px"
           >
-            <a href="#" class="w3-bar-item w3-button">One new friend request</a>
-            <a href="#" class="w3-bar-item w3-button"
+            <a href="#" class="w3-bar-item w3-button ibm-dropdown"
+              >One new friend request</a
+            >
+            <a href="#" class="w3-bar-item w3-button ibm-dropdown"
               >John Doe posted on your wall</a
             >
-            <a href="#" class="w3-bar-item w3-button">Jane likes your post</a>
+            <a href="#" class="w3-bar-item w3-button ibm-dropdown"
+              >Jane likes your post</a
+            >
           </div>
         </div>
         <a
@@ -84,7 +98,7 @@
           <img
             src="./assets/icons/icons8-cookie-monster.svg"
             class="w3-circle"
-            style="height: 23px; width: 23px"
+            style="height: 40px; width: 40px"
             alt="Avatar"
           />
         </a>
@@ -142,9 +156,14 @@
           <!-- Accordion -->
           <div class="ibm-card w3-round">
             <div class="ibm-white">
-              <button
+              <!-- <button
                 onclick="myFunction('Demo1')"
                 class="w3-button w3-block w3-theme-l1 w3-left-align"
+                id="demoOne"
+              > -->
+              <button
+                class="w3-button w3-block w3-theme-l1 w3-left-align"
+                id="demoOne"
               >
                 <i class="fas fa-user-group w3-margin-right"></i> Mes Groupes
               </button>
@@ -155,9 +174,14 @@
                   illo.
                 </p>
               </div>
-              <button
+              <!-- <button
                 onclick="myFunction('Demo2')"
                 class="w3-button w3-block w3-theme-l1 w3-left-align"
+                id="demoTwo"
+              > -->
+              <button
+                class="w3-button w3-block w3-theme-l1 w3-left-align"
+                id="demoTwo"
               >
                 <i class="fas fa-calendar-days w3-margin-right"></i> Mes
                 Evènements
@@ -169,9 +193,14 @@
                   inventore, autem modi saepe tempora.
                 </p>
               </div>
-              <button
+              <!-- <button
                 onclick="myFunction('Demo3')"
                 class="w3-button w3-block w3-theme-l1 w3-left-align"
+                id="demoThree"
+              > -->
+              <button
+                class="w3-button w3-block w3-theme-l1 w3-left-align"
+                id="demoThree"
               >
                 <i class="fas fa-images w3-margin-right"></i> Mes Photos
               </button>
@@ -250,12 +279,14 @@
           <!-- Alert Box -->
           <div
             class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small"
+            id="alert-box"
           >
-            <span
+            <!-- <span
               onclick="this.parentElement.style.display='none'"
               class="w3-button w3-theme-l3 w3-display-topright"
-            >
-              <i class="fa fa-remove"></i>
+            > -->
+            <span class="w3-button w3-theme-l3 w3-display-topright">
+              <i class="fa fa-remove" id="red-cross"></i>
             </span>
             <p><strong>Salut!</strong></p>
             <p>Quelqu'un regarde ton profile. Cliquez pour savoir qui c'est.</p>
@@ -402,7 +433,7 @@
               <p><strong>Fête</strong></p>
               <p>Vendredi 15:00</p>
               <p>
-                <button class="w3-button w3-block w3-theme-l4">Info</button>
+                <button class="w3-button w3-block ibm-theme">Info</button>
               </p>
             </div>
           </div>
@@ -459,11 +490,11 @@
     <br />
 
     <!-- Footer -->
-    <footer class="w3-container ibm-theme w3-padding-16">
-      <!-- <h5>Footer</h5> -->
-    </footer>
+    <!-- <footer class="w3-container ibm-theme w3-padding-16">
+      <h5>Footer</h5>
+    </footer> -->
 
-    <footer class="w3-container ibm-theme">
+    <footer class="w3-container ibm-theme-footer">
       <p>
         Powered by
         <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
@@ -471,6 +502,7 @@
         >
         & Rework by Pierre-OlivierB.
       </p>
+      <a href="#top" class="ibm-footer-before"><span>&#10162;</span></a>
     </footer>
     <script src="./index.js"></script>
   </body>

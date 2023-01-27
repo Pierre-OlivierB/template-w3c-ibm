@@ -38,19 +38,25 @@ h5 {
 .ibm-bg-logo {
   background: var(--color3);
 }
+.ibm-bg-logo:hover,
+.ibm-hover-white:hover,
+.ibm-dropdown:hover {
+  background: var(--color1) !important;
+}
 .ibm-bgAndCol-body {
   color: var(--color4) !important;
   background: var(--color1) !important;
 }
-.ibm-white,
-.ibm-hover-white:hover {
+.ibm-white {
   color: var(--color4) !important;
   background-color: var(--color3) !important;
 }
+
 hr {
   border-top: 1px solid var(--color2) !important;
 }
-.ibm-theme {
+.ibm-theme,
+.ibm-theme-footer {
   color: var(--color1) !important;
   background-color: var(--color4) !important;
   border-radius: 5px;
@@ -103,8 +109,52 @@ button {
   border-radius: 3px;
   transition: transform 2s ease;
 }
-button:hover {
+button:hover,
+.ibm-theme:hover {
   transform: scale(1.1);
   background-color: var(--color1) !important;
   color: var(--color4) !important;
+}
+
+/*! footer*/
+footer {
+  position: relative;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* footer p {
+  display: contents;
+  align-items: center;
+} */
+.ibm-footer-before {
+  text-decoration: none;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 50px;
+  z-index: 2;
+  display: block !important;
+  font-size: 3rem;
+  transform: translateY(-100px) rotateZ(-90deg);
+  color: black;
+  transition: color 2s ease, transform 2s ease;
+  animation: beat 5s linear infinite;
+}
+.ibm-footer-before:hover {
+  color: red;
+  transform: translateY(-90px) rotateZ(-90deg) scale(2);
+  cursor: pointer;
+}
+@keyframes beat {
+  from {
+    transform: translateY(-90px) rotateZ(-90deg) scale(1);
+  }
+  50% {
+    transform: translateY(-90px) rotateZ(-90deg) scale(1.5);
+  }
+  to {
+    transform: translateY(-90px) rotateZ(-90deg) scale(1);
+  }
 }
