@@ -147,6 +147,35 @@ footer {
   transform: translateY(-90px) rotateZ(-90deg) scale(2);
   cursor: pointer;
 }
+/*!Mes sources, Mes articles, Mes projets  */
+.ibm-interest {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+  height: 180px;
+}
+.ibm-mp {
+  border: 1px solid transparent;
+  padding: 2px;
+}
+.ibm-mp:hover {
+  border: 1px solid var(--color4);
+  border-radius: 5px;
+  background: var(--color1);
+  text-decoration: none;
+}
+/*!Articles  */
+.ibm-art-logo {
+  width: 60px;
+  height: 60px;
+  transform: scale(3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @keyframes beat {
   from {
     transform: translateY(-90px) rotateZ(-90deg) scale(1);
