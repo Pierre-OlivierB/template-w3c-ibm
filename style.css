@@ -170,6 +170,13 @@ footer {
     color: var(--color2);
     cursor: pointer;
   }
+  .ibm-theme-footer {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .ibm-theme-footer p {
+    width: 50%;
+  }
 }
 @keyframes minBeat {
   from {
